@@ -24,13 +24,13 @@ describe('Test of Lineno', function() {
     });
 
     it('do in require-ed file.', function() {
-      var ret = require(path.resolve(__dirname, 'lineno/a.js'));
+      var ret = require(path.resolve(__dirname, 'fixtures/a.js'));
       var lno = ret.lineno;
       assert.equal(lno, 6);
     });
 
     it('do in load-ed file.', function() {
-      var filename = path.resolve(__dirname, 'lineno/a.js');
+      var filename = path.resolve(__dirname, 'fixtures/a.js');
       var ctx = load(filename, {module:{}, exports:{}});
       var lno = ctx.module.exports.lineno;
       assert.equal(lno, 6);

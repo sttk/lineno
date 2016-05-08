@@ -1,6 +1,4 @@
-'use strict';
-
-var path = require('path');
+const path = require('path');
 
 var Lineno = function(filename) {
   Constructor.prototype = Lineno.prototype;
